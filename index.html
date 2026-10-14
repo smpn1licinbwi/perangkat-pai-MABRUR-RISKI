@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Perangkat_PAI MABRUR</title>
+  <link rel="icon" href="https://imagizer.imageshack.com/v2/640x480q70/922/SNzZib.png" />
+  <style>
+    /* Reset total agar tidak ada celah putih (margin/padding) */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #eee;
+      overflow: hidden; /* Mencegah scroll ganda pada browser luar */
+      -webkit-overflow-scrolling: touch; /* Membuat scroll terasa smooth di iOS */
+    }
+
+    /* Kontainer utama menggunakan tinggi dinamis */
+    .iframe-container {
+      width: 100%;
+      height: 100vh;  /* Fallback untuk browser lama */
+      height: 100dvh; /* Mengikuti tinggi layar asli di browser modern (mengatasi bar navigasi HP) */
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="iframe-container">
+    <iframe
+      id="app"
+      src="https://script.google.com/macros/s/AKfycbyjn7rPgn1gCoS_tWvjUri5TrpBTEUpgq6elIUjxoc7C-4ZUKH__dTxycTmfKVdZUw/exec"
+      loading="lazy"
+      allowfullscreen
+      allow="fullscreen; camera; microphone; display-capture; geolocation; clipboard-write;">
+    </iframe>
+  </div>
+
+</body>
+</html>
